@@ -1,2 +1,3 @@
 ﻿  Project_Team_Z.cpp
-  Project_Team_Z.vcxproj -> C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\x64\Debug\Project_Team_Z.exe
+C:\Users\nistel\Documents\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(49,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\nistel\Documents\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(25,12): fatal  error C1075: '{': no matching token found

@@ -1,7 +1,8 @@
 #include <iostream>
+#include <ctime>
 using namespace std;
 
-// Функция за показване на ASCII и менюто
+//Functions for showing ASCII for menu
 void displayMenu() {
     // ASCII
     cout << "\t\t\t\t _     _   _____   _     _   _____    __   __    _____   _     _ " << endl;
@@ -12,7 +13,7 @@ void displayMenu() {
     cout << "\t\t\t\t(_)   (_)(_)   (_)(_)   (_) (_____) (_)     (_)(_)   (_)(_)   (_)" << endl;
     cout << "\t\t\t\t                                                                   " << endl;
 
-    //Опции на менюто
+    //Options for the menu
     cout << "\t\t\t\t\t\t-----------------------\n";
     cout << "\t\t\t\t\t\tMenu:\n";
     cout << "\t\t\t\t\t\t1: Play Game\n";
@@ -23,19 +24,33 @@ void displayMenu() {
 
 int main() {
     int choice;
+    bool flag = false;
     do {
         displayMenu();
         cout << "\t\t\t\t\t\tYou pick: ";
         cin >> choice;
 
-        // Съобщение за опции
+        //Message for options
         switch (choice) {
-        case 1: cout << "Play Game\n"; break;
+        case 1: flag = true;
         case 2: cout << "Help/How to Play selected.\n"; break;
         case 3: cout << "Goodbye!\n"; break;
         default: cout << "Invalid option. Please try again.\n";
         }
-    } while (choice != 3);
+    } while (choice != 1 and choice != 2 and choice != 3);
+    if (flag == true)
+    {
+        //The Words that can be chosen
+        char letter;
+        string word;
+        string words[] = { "absorb", "action", "banner", "banana", "circle", "clover", "doctor", "аbroad", "casual", "couple", "anyway", "corner", "desire", "appeal", "costly", "detail", "appear", "county", "detect",
+"beyond", "budget",	"device", "faster", "fourty", "poppy", "packed", "pacify" };
+        //Randomizing the word
+        srand(time(NULL));
+        int word_Num = rand() % 27;
+        word = words[word_Num];
+        //Hiding the word
+        string hide_word(word.length(), '_');
 
     return 0;
 }
