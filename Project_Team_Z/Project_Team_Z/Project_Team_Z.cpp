@@ -2,6 +2,10 @@
 #include <ctime>
 using namespace std;
 
+int tries = 5;
+string message = "You have 5 tries to get the word";
+void hang_man(char);
+int checkGuess(char, string, string&);
 //Functions for showing ASCII for menu
 void displayMenu() {
     // ASCII
@@ -82,6 +86,38 @@ int main() {
         word = words[word_Num];
         //Hiding the word
         string hide_word(word.length(), '_');
+        system("cls");
+        //Checks if tries equals to zero
+        while (tries != 0)
+        {
+            //sets up the hidden word
+            hang_man('n');
+            cout << "\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\t" << hide_word << endl;
+            cout << "\t\t\t\tGuess a letter: ";
+            cin >> letter;
+
+            system("cls");
+            //checks if the guess is wrong
+            if (checkGuess(letter, word, hide_word) == 0)
+            {
+                message = "You got it incorrect";
+                tries--;
+            }
+            else
+            {
+                message = "Good job, keep going!";
+            }
+            //checks if the word is guessed
+            if (hide_word == word)
+            {
+                message = "You got it!";
+                hang_man('f');
+                cout << "\t\t\t\tLife: " << tries << endl;
+                cout << "\t\t\t\tThe word is: " << word << endl;
+                break;
+            }
+        }
 
         return 0;
     }
