@@ -96,7 +96,37 @@ int main() {
         default: cout << "Please pick a valid option.\n";
         }
     }
+    if (flag4 == true)
+    {
+        int tries = 7;
 
+        char letter;
+        //The Words that can be chosen for easy mode
+        string word;
+        string words[] = { "pizza", "juicy", "apple", "brick", "zebra", "queen", "horse", "dance", "charm", "ideal", "cycle", "grape", "space", "table", "value", "water", "candy", "drive", "glove",
+"human", "humor", "dying", "lover", "berry", "greed", "grass", "judge" };
+        //Randomizing the word
+        srand(time(NULL));
+        int word_Num = rand() % 27;
+        word = words[word_Num];
+        //Hiding the word
+        string hide_word(word.length(), '_');
+
+        system("cls");
+
+        //Checks if you still have more that 0 tries
+        while (tries != 0)
+        {
+            hang_man('n');
+            cout << "\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\t" << hide_word << endl;
+            cout << "\t\t\t\tGuess a letter: ";
+            cin >> letter;
+
+            system("cls");
+
+
+        }
     //Medium mode
     if (flag5 == true)
     {

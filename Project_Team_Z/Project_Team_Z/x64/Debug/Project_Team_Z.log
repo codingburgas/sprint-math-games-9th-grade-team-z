@@ -1,5 +1,14 @@
 ﻿  Project_Team_Z.cpp
-C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(111,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(168,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(224,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Project_Team_Z.vcxproj -> C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\x64\Debug\Project_Team_Z.exe
+C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(110,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(139,98): warning C4566: character represented by universal-character-name '\u0430' cannot be represented in the current code page (1252)
+C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(142,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(199,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(252,5): error C2601: 'checkGuess': local function definitions are illegal
+      C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(35,12):
+      this line contains a '{' which has not yet been matched
+  
+C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(271,6): error C2601: 'hang_man': local function definitions are illegal
+      C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(35,12):
+      this line contains a '{' which has not yet been matched
+  
+C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(35,12): error C1075: '{': no matching token found
