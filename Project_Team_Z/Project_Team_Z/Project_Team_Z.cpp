@@ -1,12 +1,17 @@
-﻿#include <iostream>
+﻿// Team_Z.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
 #include <ctime>
 using namespace std;
 
-int tries = 5;
+
 string message = "You have 5 tries to get the word";
+
+
 void hang_man(char);
 int checkGuess(char, string, string&);
-void sentice(char);
+void sentince(char);
 //Functions for showing ASCII for menu
 void displayMenu() {
     // ASCII
@@ -28,10 +33,8 @@ void displayMenu() {
 }
 
 int main() {
-    int choice;
-    int choice2;
-    bool flag = false;
-    bool flag2 = false;
+    int choice, choice2, choice3;
+    bool flag = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false;
     do {
         displayMenu();
         cout << "\t\t\t\t\t\tYou pick: ";
@@ -41,12 +44,10 @@ int main() {
         switch (choice) {
         case 1: flag = true; break;
         case 2: flag2 = true; break;
-        case 3: cout << "Goodbye!\n"; break;
         default: cout << "Invalid option. Please try again.\n";
         }
-    } while (choice != 1 and choice != 2 and choice != 3);
 
-    //How to play hangman
+    } while (choice != 1 and choice != 2 and choice != 3);
     if (flag2 == true and flag == false) {
         cout << "How to play hangman:" << endl;
         cout << "Hangman is a word based game that makes you try to guess a hidden word, chosen randomly from the word generator." << endl;
@@ -54,9 +55,7 @@ int main() {
         cout << "Easy = You get 6 lives to guess the 4 letter word" << endl;
         cout << "Medium = You get 5 lives to guess the six letter word" << endl;
         cout << "Hard = You get 3 lives to guess the eight letter word" << endl;
-        cout << "Enjoy the game! 🎉" << endl;
-
-        //add return menu
+        cout << "Enjoy the game! " << endl;
         do {
             cout << "\t\t\t\t\t\t-----------------------\n";
             cout << "\t\t\t\t\t\tWant to play? " << endl;
@@ -71,15 +70,32 @@ int main() {
             case 2: return 0; break;
             default: cout << "Please pick a valid option.\n";
             }
-        } while (choice2 != 1);
-
+        } while (choice2 != 1 and choice2 != 2);
     }
     if (flag == true)
     {
+        cout << "\t\t\t\t\t\t-----------------------\n";
+        cout << "\t\t\t\t\t\tMenu:\n";
+        cout << "\t\t\t\t\t\t1: Easy\n";
+        cout << "\t\t\t\t\t\t2: Medium\n";
+        cout << "\t\t\t\t\t\t3: Hard\n";
+        cout << "\t\t\t\t\t\t-----------------------\n";
+        cout << "\t\t\t\t\t\tYou pick: ";
+        cin >> choice3;
+        switch (choice3)
+        {
+        case 1: flag4 = true; break;
+        case 2: flag5 = true; break;
+        default: cout << "Please pick a valid option.\n";
+        }
+    }
+    if (flag5 == true)
+    {
+        int tries = 5;
         //The Words that can be chosen
         char letter;
         string word;
-        string words[] = { "absorb", "action", "banner", "banana", "circle", "clover", "doctor", "àbroad", "casual", "couple", "anyway", "corner", "desire", "appeal", "costly", "detail", "appear", "county", "detect",
+        string words[] = { "absorb", "action", "banner", "banana", "circle", "clover", "doctor", "аbroad", "casual", "couple", "anyway", "corner", "desire", "appeal", "costly", "detail", "appear", "county", "detect",
 "beyond", "budget",	"device", "faster", "fourty", "poppy", "packed", "pacify" };
         //Randomizing the word
         srand(time(NULL));
@@ -87,11 +103,11 @@ int main() {
         word = words[word_Num];
         //Hiding the word
         string hide_word(word.length(), '_');
+
         system("cls");
-        //Checks if tries equals to zero
+
         while (tries != 0)
         {
-            //sets up the hidden word
             hang_man('n');
             cout << "\t\t\t\tLife: " << tries << endl;
             cout << "\t\t\t\t" << hide_word << endl;
@@ -99,7 +115,7 @@ int main() {
             cin >> letter;
 
             system("cls");
-            //checks if the guess is wrong
+
             if (checkGuess(letter, word, hide_word) == 0)
             {
                 message = "You got it incorrect";
@@ -109,7 +125,6 @@ int main() {
             {
                 message = "Good job, keep going!";
             }
-            //checks if the word is guessed
             if (hide_word == word)
             {
                 message = "You got it!";
@@ -121,14 +136,14 @@ int main() {
         }
         if (tries == 0)
         {
-            message = "You got Hanged!";
+            message = "You are Hanged!";
             hang_man('h');
             cout << "\t\t\t\tLife: " << tries << endl;
-            cout << "\t\t\t\tThe month is: " << word << endl;
+            cout << "\t\t\t\tThe word is: " << word << endl;
         }
-
-        return 0;
     }
+
+    return 0;
 }
 int checkGuess(char guess, string real_word, string& hidden_word)
 {
@@ -148,7 +163,7 @@ int checkGuess(char guess, string real_word, string& hidden_word)
     return matches;
 }
 
-void(hang_man(char state)) {
+void hang_man(char state) {
     string head_string = "|";
     string stage = "=";
     string lever = "|";
