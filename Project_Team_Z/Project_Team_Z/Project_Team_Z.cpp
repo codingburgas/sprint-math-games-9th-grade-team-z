@@ -96,8 +96,10 @@ int main() {
         default: cout << "Please pick a valid option.\n";
         }
     }
+    //Easy mode
     if (flag4 == true)
     {
+        message = "You have 7 tries to get the word";
         int tries = 7;
 
         char letter;
@@ -124,6 +126,31 @@ int main() {
             cin >> letter;
 
             system("cls");
+            if (checkGuess(letter, word, hide_word) == 0)
+            {
+                message = "You got it incorrect";
+                tries--;
+            }
+            else
+            {
+                message = "Good job, keep going!";
+            }
+            if (hide_word == word)
+            {
+                message = "You got it!";
+                hang_man('f');
+                cout << "\t\t\t\tLife: " << tries << endl;
+                cout << "\t\t\t\tThe word is: " << word << endl;
+                break;
+            }
+        }
+        if (tries == 0)
+        {
+            message = "You are Hanged!";
+            hang_man('h');
+            cout << "\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\tThe word is: " << word << endl;
+        }
 
 
         }
