@@ -34,7 +34,7 @@ void displayMenu() {
 
 int main() {
     int choice, choice2, choice3;
-    bool flag = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false;
+    bool flag = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false,flag6 = false;
     do {
         displayMenu();
         cout << "\t\t\t\t\t\tYou pick: ";
@@ -86,22 +86,23 @@ int main() {
         {
         case 1: flag4 = true; break;
         case 2: flag5 = true; break;
+        case 3: flag6 = true; break;
         default: cout << "Please pick a valid option.\n";
         }
     }
+
+    
     if (flag5 == true)
     {
         int tries = 5;
-        //The Words that can be chosen
+        
         char letter;
         string word;
         string words[] = { "absorb", "action", "banner", "banana", "circle", "clover", "doctor", "аbroad", "casual", "couple", "anyway", "corner", "desire", "appeal", "costly", "detail", "appear", "county", "detect",
 "beyond", "budget",	"device", "faster", "fourty", "poppy", "packed", "pacify" };
-        //Randomizing the word
         srand(time(NULL));
         int word_Num = rand() % 27;
         word = words[word_Num];
-        //Hiding the word
         string hide_word(word.length(), '_');
 
         system("cls");
@@ -143,8 +144,67 @@ int main() {
         }
     }
 
+    if (flag6 == true)
+    {
+        message = "You have 3 tries to get the word";
+        int tries = 3;
+        //The Words that can be chosen
+        char letter;
+        string word;
+        string words[] = { "academic", "blending", "colorful", "database", "elevator","familiar", "generate", "harmony", "imagine", "junction","keyboard", "landmark", "magnetic", "narrator", "operator",
+            "peaceful", "question", "resource", "shelters", "terminal","universe", "valuable", "wellness", "xenolith", "yearning","zealous", "tranquil", "optimist" };
+        //Randomizing the word
+        srand(time(NULL));
+        int word_Num = rand() % 27;
+        word = words[word_Num];
+        //Hiding the word
+        string hide_word(word.length(), '_');
+
+        system("cls");
+
+        while (tries != 0)
+        {
+            hang_man('n');
+            cout << "\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\t" << hide_word << endl;
+            cout << "\t\t\t\tGuess a letter: ";
+            cin >> letter;
+
+            system("cls");
+
+            if (checkGuess(letter, word, hide_word) == 0)
+            {
+                message = "You got it incorrect";
+                tries--;
+            }
+            else
+            {
+                message = "Good job, keep going!";
+            }
+            if (hide_word == word)
+            {
+                message = "You got it!";
+                hang_man('f');
+                cout << "\t\t\t\tLife: " << tries << endl;
+                cout << "\t\t\t\tThe word is: " << word << endl;
+                break;
+            }
+        }
+
+
+        if (tries == 0)
+        {
+            message = "You are Hanged!";
+            hang_man('h');
+            cout << "\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\tThe word is: " << word << endl;
+        }
+
+
+    }
     return 0;
 }
+
 int checkGuess(char guess, string real_word, string& hidden_word)
 {
     int matches = 0;
