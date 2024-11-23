@@ -6,6 +6,7 @@ int tries = 5;
 string message = "You have 5 tries to get the word";
 void hang_man(char);
 int checkGuess(char, string, string&);
+void sentice(char);
 //Functions for showing ASCII for menu
 void displayMenu() {
     // ASCII
@@ -118,7 +119,56 @@ int main() {
                 break;
             }
         }
+        if (tries == 0)
+        {
+            message = "You got Hanged!";
+            hang_man('h');
+            cout << "\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\tThe month is: " << word << endl;
+        }
 
         return 0;
     }
+}
+int checkGuess(char guess, string real_word, string& hidden_word)
+{
+    int matches = 0;
+    int len = real_word.length();
+    for (int i = 0; i < len; i++) {
+        if (guess == hidden_word[i])
+        {
+            return 0;
+        }
+        if (guess == real_word[i])
+        {
+            hidden_word[i] = guess;
+            matches++;
+        }
+    }
+    return matches;
+}
+
+void(hang_man(char state)) {
+    string head_string = "|";
+    string stage = "=";
+    string lever = "|";
+    if (state == 'f')
+    {
+        head_string = " ";
+    }
+    if (state == 'h')
+    {
+        stage = " ";
+        lever = "/";
+    }
+    cout << "\t\t\t\t_________________" << endl;
+    cout << "\t\t\t\t       " << head_string << "        |" << endl;
+    cout << "\t\t\t\t       O        |" << endl;
+    cout << "\t\t\t\t      / \\       |" << "\t     " << message << endl;
+    cout << "\t\t\t\t       |        |" << "\t     /" << endl;
+    cout << "\t\t\t\t      / \\       |           O  " << endl;
+    cout << "\t\t\t\t  ===" << stage << stage << stage << stage << stage << "===   |   " << lever << lever << "     / \\" << endl;
+    cout << "\t\t\t\t   |       |    |  ====     |" << endl;
+    cout << "\t\t\t\t   |       |    |  ||||    / \\" << endl;
+    cout << "\t\t\t\t=================================" << endl;
 }

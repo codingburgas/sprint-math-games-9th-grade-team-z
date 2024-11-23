@@ -1,4 +1,6 @@
 ﻿  Project_Team_Z.cpp
-C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(49,17): warning C4566: character represented by universal-character-name '\U0001F389' cannot be represented in the current code page (1252)
-C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(59,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\mitkomeshkov\Downloads\team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(25,12): error C1075: '{': no matching token found
+C:\Users\nistel\Documents\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(57,17): warning C4566: character represented by universal-character-name '\U0001F389' cannot be represented in the current code page (1251)
+C:\Users\nistel\Documents\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(82,98): warning C4566: character represented by universal-character-name '\u00E0' cannot be represented in the current code page (1251)
+C:\Users\nistel\Documents\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(85,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\nistel\Documents\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(136,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Project_Team_Z.vcxproj -> C:\Users\nistel\Documents\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\x64\Debug\Project_Team_Z.exe
