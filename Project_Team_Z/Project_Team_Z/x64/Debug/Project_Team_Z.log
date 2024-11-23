@@ -1,5 +1,5 @@
 ﻿  Project_Team_Z.cpp
-C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(103,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(157,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(211,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(111,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(168,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\Project_Team_Z\Project_Team_Z.cpp(224,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Project_Team_Z.vcxproj -> C:\Users\GRIGS\Desktop\Team Z\sprint-math-games-9th-grade-team-z\Project_Team_Z\x64\Debug\Project_Team_Z.exe

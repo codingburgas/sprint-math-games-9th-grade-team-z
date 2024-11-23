@@ -48,6 +48,8 @@ int main() {
         }
 
     } while (choice != 1 and choice != 2 and choice != 3);
+
+    // Help menu
     if (flag2 == true and flag == false) {
         cout << "How to play hangman:" << endl;
         cout << "Hangman is a word based game that makes you try to guess a hidden word, chosen randomly from the word generator." << endl;
@@ -56,6 +58,8 @@ int main() {
         cout << "Medium = You get 5 lives to guess the six letter word" << endl;
         cout << "Hard = You get 3 lives to guess the eight letter word" << endl;
         cout << "Enjoy the game! " << endl;
+
+        //Do you want to still want to play menu
         do {
             cout << "\t\t\t\t\t\t-----------------------\n";
             cout << "\t\t\t\t\t\tWant to play? " << endl;
@@ -72,6 +76,8 @@ int main() {
             }
         } while (choice2 != 1 and choice2 != 2);
     }
+
+    // Difficulty selection
     if (flag == true)
     {
         cout << "\t\t\t\t\t\t-----------------------\n";
@@ -91,22 +97,26 @@ int main() {
         }
     }
 
-    
+    //Medium mode
     if (flag5 == true)
     {
         int tries = 5;
         
         char letter;
+        //The Words that can be chosen dor medium mode
         string word;
         string words[] = { "absorb", "action", "banner", "banana", "circle", "clover", "doctor", "аbroad", "casual", "couple", "anyway", "corner", "desire", "appeal", "costly", "detail", "appear", "county", "detect",
 "beyond", "budget",	"device", "faster", "fourty", "poppy", "packed", "pacify" };
+        //Randomizing the word
         srand(time(NULL));
         int word_Num = rand() % 27;
         word = words[word_Num];
+        //Hiding the word
         string hide_word(word.length(), '_');
 
         system("cls");
 
+        //Checks if you still have more that 0 tries
         while (tries != 0)
         {
             hang_man('n');
@@ -144,11 +154,12 @@ int main() {
         }
     }
 
+    //Hard Mode
     if (flag6 == true)
     {
         message = "You have 3 tries to get the word";
         int tries = 3;
-        //The Words that can be chosen
+        //The Words that can be chosen for hard mode
         char letter;
         string word;
         string words[] = { "academic", "blending", "colorful", "database", "elevator","familiar", "generate", "harmony", "imagine", "junction","keyboard", "landmark", "magnetic", "narrator", "operator",
@@ -162,6 +173,7 @@ int main() {
 
         system("cls");
 
+        //Checks if you still have more that 0 tries
         while (tries != 0)
         {
             hang_man('n');
@@ -205,6 +217,7 @@ int main() {
     return 0;
 }
 
+//Shows you if the letter you have typed in is correct or incorrect
 int checkGuess(char guess, string real_word, string& hidden_word)
 {
     int matches = 0;
@@ -222,6 +235,7 @@ int checkGuess(char guess, string real_word, string& hidden_word)
     }
     return matches;
 }
+
 
 void hang_man(char state) {
     string head_string = "|";
