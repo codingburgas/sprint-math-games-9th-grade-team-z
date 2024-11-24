@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <img src="imageZ.png" alt="LogoTeamZ">
+        <img src="logo.png" alt="LogoTeamZ">
         <h1>Hangman</h1>
         <br>
         <h4>Try A Retro Game!</h4> 
@@ -16,8 +16,7 @@
         <p>
             Team Z is about remaking retro games so that younger audiences can experience the old classics!<br> 
             Although the team was recently founded, we already have such great relations one to another!<br>
-             
-        </p>
+        </p>     
         <br>
         <h2>
             How does it work?
@@ -33,7 +32,7 @@
         </h2>
 
 
-        <div class="team">| Name | Role | Grade |
+<div class="team">| Name | Role | Grade |
 | :---:   | :---: | :---: |
 |  
 | <h3><a href = "https://github.com/ADKokalarov23">Asen Kokalarov</a></h3> | Scrum-Trainer | 9G |
