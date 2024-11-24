@@ -15,29 +15,30 @@ void sentince(char);
 //Functions for showing ASCII for menu
 void displayMenu() {
     // ASCII
-    cout << "\t\t\t\t _     _   _____   _     _   _____    __   __    _____   _     _ " << endl;
-    cout << "\t\t\t\t(_)   (_) (_____) (_)   (_) (_____)  (__)_(__)  (_____) (_)   (_)" << endl;
-    cout << "\t\t\t\t(_)___(_)(_)___(_)(__)_ (_)(_)  ___ (_) (_) (_)(_)___(_)(__)_ (_)" << endl;
-    cout << "\t\t\t\t(_______)(_______)(_)(_)(_)(_) (___)(_) (_) (_)(_______)(_)(_)(_)" << endl;
-    cout << "\t\t\t\t(_)   (_)(_)   (_)(_)  (__)(_)___(_)(_)     (_)(_)   (_)(_)  (__)" << endl;
-    cout << "\t\t\t\t(_)   (_)(_)   (_)(_)   (_) (_____) (_)     (_)(_)   (_)(_)   (_)" << endl;
-    cout << "\t\t\t\t                                                                   " << endl;
+    cout << "\t\t\t\t\t\t _     _   _____   _     _   _____    __   __    _____   _     _ " << endl;
+    cout << "\t\t\t\t\t\t(_)   (_) (_____) (_)   (_) (_____)  (__)_(__)  (_____) (_)   (_)" << endl;
+    cout << "\t\t\t\t\t\t(_)___(_)(_)___(_)(__)_ (_)(_)  ___ (_) (_) (_)(_)___(_)(__)_ (_)" << endl;
+    cout << "\t\t\t\t\t\t(_______)(_______)(_)(_)(_)(_) (___)(_) (_) (_)(_______)(_)(_)(_)" << endl;
+    cout << "\t\t\t\t\t\t(_)   (_)(_)   (_)(_)  (__)(_)___(_)(_)     (_)(_)   (_)(_)  (__)" << endl;
+    cout << "\t\t\t\t\t\t(_)   (_)(_)   (_)(_)   (_) (_____) (_)     (_)(_)   (_)(_)   (_)" << endl;
+    cout << "\t\t\t\t\t\t                                                                  " << endl;
 
     //Options for the menu
-    cout << "\t\t\t\t\t\t-----------------------\n";
-    cout << "\t\t\t\t\t\tMenu:\n";
-    cout << "\t\t\t\t\t\t1: Play Game\n";
-    cout << "\t\t\t\t\t\t2: Help/How to Play\n";
-    cout << "\t\t\t\t\t\t3: Quit\n";
-    cout << "\t\t\t\t\t\t-----------------------\n";
+    cout << "\t\t\t\t\t\t\t\t-----------------------\n";
+    cout << "\t\t\t\t\t\t\t\tMenu:\n";
+    cout << "\t\t\t\t\t\t\t\t1: Play Game\n";
+    cout << "\t\t\t\t\t\t\t\t2: Help/How to Play\n";
+    cout << "\t\t\t\t\t\t\t\t3: Quit\n";
+    cout << "\t\t\t\t\t\t\t\t-----------------------\n";
 }
 
 int main() {
+    system("color 9");
     int choice, choice2, choice3;
     bool flag = false, flag2 = false, flag3 = false, flag4 = false, flag5 = false,flag6 = false;
     do {
         displayMenu();
-        cout << "\t\t\t\t\t\tYou pick: ";
+        cout << "\t\t\t\t\t\t\t\tYou pick: ";
         cin >> choice;
 
         //Message for options
@@ -61,18 +62,18 @@ int main() {
 
         //Do you want to still want to play menu
         do {
-            cout << "\t\t\t\t\t\t-----------------------\n";
-            cout << "\t\t\t\t\t\tWant to play? " << endl;
-            cout << "\t\t\t\t\t\t1| Start " << endl;
-            cout << "\t\t\t\t\t\t2| Quit " << endl;
-            cout << "\t\t\t\t\t\t-----------------------\n";
-            cout << "\t\t\t\t\t\tYou pick: ";
+            cout << "\t\t\t\t\t\t\t\t-----------------------\n";
+            cout << "\t\t\t\t\t\t\t\tWant to play? " << endl;
+            cout << "\t\t\t\t\t\t\t\t1| Start " << endl;
+            cout << "\t\t\t\t\t\t\t\t2| Quit " << endl;
+            cout << "\t\t\t\t\t\t\t\t-----------------------\n";
+            cout << "\t\t\t\t\t\t\t\tYou pick: ";
             cin >> choice2;
             switch (choice2)
             {
             case 1: flag = true; break;
             case 2: return 0; break;
-            default: cout << "Please pick a valid option.\n";
+            default: return 0;
             }
         } while (choice2 != 1 and choice2 != 2);
     }
@@ -80,20 +81,20 @@ int main() {
     // Difficulty selection
     if (flag == true)
     {
-        cout << "\t\t\t\t\t\t-----------------------\n";
-        cout << "\t\t\t\t\t\tMenu:\n";
-        cout << "\t\t\t\t\t\t1: Easy\n";
-        cout << "\t\t\t\t\t\t2: Medium\n";
-        cout << "\t\t\t\t\t\t3: Hard\n";
-        cout << "\t\t\t\t\t\t-----------------------\n";
-        cout << "\t\t\t\t\t\tYou pick: ";
+        cout << "\t\t\t\t\t\t\t\t-----------------------\n";
+        cout << "\t\t\t\t\t\t\t\tMenu:\n";
+        cout << "\t\t\t\t\t\t\t\t1: Easy\n";
+        cout << "\t\t\t\t\t\t\t\t2: Medium\n";
+        cout << "\t\t\t\t\t\t\t\t3: Hard\n";
+        cout << "\t\t\t\t\t\t\t\t-----------------------\n";
+        cout << "\t\t\t\t\t\t\t\tYou pick: ";
         cin >> choice3;
         switch (choice3)
         {
         case 1: flag4 = true; break;
         case 2: flag5 = true; break;
         case 3: flag6 = true; break;
-        default: cout << "Please pick a valid option.\n";
+        default: cout << "\t\t\t\t\t\t\t\tPlease pick a valid option.\n";
         }
     }
     //Easy mode
@@ -120,9 +121,9 @@ int main() {
         while (tries != 0)
         {
             hang_man('n');
-            cout << "\t\t\t\tLife: " << tries << endl;
-            cout << "\t\t\t\t" << hide_word << endl;
-            cout << "\t\t\t\tGuess a letter: ";
+            cout << "\t\t\t\t\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\t\t\t\t\t" << hide_word << endl;
+            cout << "\t\t\t\t\t\t\t\tGuess a letter: ";
             cin >> letter;
 
             system("cls");
@@ -139,8 +140,8 @@ int main() {
             {
                 message = "You got it!";
                 hang_man('f');
-                cout << "\t\t\t\tLife: " << tries << endl;
-                cout << "\t\t\t\tThe word is: " << word << endl;
+                cout << "\t\t\t\t\t\t\t\tLife: " << tries << endl;
+                cout << "\t\t\t\t\t\t\t\tThe word is: " << word << endl;
                 break;
             }
         }
@@ -148,8 +149,8 @@ int main() {
         {
             message = "You are Hanged!";
             hang_man('h');
-            cout << "\t\t\t\tLife: " << tries << endl;
-            cout << "\t\t\t\tThe word is: " << word << endl;
+            cout << "\t\t\t\t\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\t\t\t\t\tThe word is: " << word << endl;
         }
 
 
@@ -177,9 +178,9 @@ int main() {
         while (tries != 0)
         {
             hang_man('n');
-            cout << "\t\t\t\tLife: " << tries << endl;
-            cout << "\t\t\t\t" << hide_word << endl;
-            cout << "\t\t\t\tGuess a letter: ";
+            cout << "\t\t\t\t\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\t\t\t\t\t" << hide_word << endl;
+            cout << "\t\t\t\t\t\t\t\tGuess a letter: ";
             cin >> letter;
 
             system("cls");
@@ -197,8 +198,8 @@ int main() {
             {
                 message = "You got it!";
                 hang_man('f');
-                cout << "\t\t\t\tLife: " << tries << endl;
-                cout << "\t\t\t\tThe word is: " << word << endl;
+                cout << "\t\t\t\t\t\t\t\tLife: " << tries << endl;
+                cout << "\t\t\t\t\t\t\t\tThe word is: " << word << endl;
                 break;
             }
         }
@@ -206,8 +207,8 @@ int main() {
         {
             message = "You are Hanged!";
             hang_man('h');
-            cout << "\t\t\t\tLife: " << tries << endl;
-            cout << "\t\t\t\tThe word is: " << word << endl;
+            cout << "\t\t\t\t\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\t\t\t\t\tThe word is: " << word << endl;
         }
     }
 
@@ -234,9 +235,9 @@ int main() {
         while (tries != 0)
         {
             hang_man('n');
-            cout << "\t\t\t\tLife: " << tries << endl;
-            cout << "\t\t\t\t" << hide_word << endl;
-            cout << "\t\t\t\tGuess a letter: ";
+            cout << "\t\t\t\t\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\t\t\t\t\t" << hide_word << endl;
+            cout << "\t\t\t\t\t\t\t\tGuess a letter: ";
             cin >> letter;
 
             system("cls");
@@ -254,8 +255,8 @@ int main() {
             {
                 message = "You got it!";
                 hang_man('f');
-                cout << "\t\t\t\tLife: " << tries << endl;
-                cout << "\t\t\t\tThe word is: " << word << endl;
+                cout << "\t\t\t\t\t\t\t\tLife: " << tries << endl;
+                cout << "\t\t\t\t\t\t\t\tThe word is: " << word << endl;
                 break;
             }
         }
@@ -265,8 +266,8 @@ int main() {
         {
             message = "You are Hanged!";
             hang_man('h');
-            cout << "\t\t\t\tLife: " << tries << endl;
-            cout << "\t\t\t\tThe word is: " << word << endl;
+            cout << "\t\t\t\t\t\t\t\tLife: " << tries << endl;
+            cout << "\t\t\t\t\t\t\t\tThe word is: " << word << endl;
         }
 
 
@@ -307,14 +308,14 @@ void hang_man(char state) {
         stage = " ";
         lever = "/";
     }
-    cout << "\t\t\t\t_________________" << endl;
-    cout << "\t\t\t\t       " << head_string << "        |" << endl;
-    cout << "\t\t\t\t       O        |" << endl;
-    cout << "\t\t\t\t      / \\       |" << "\t     " << message << endl;
-    cout << "\t\t\t\t       |        |" << "\t     /" << endl;
-    cout << "\t\t\t\t      / \\       |           O  " << endl;
-    cout << "\t\t\t\t  ===" << stage << stage << stage << stage << stage << "===   |   " << lever << lever << "     / \\" << endl;
-    cout << "\t\t\t\t   |       |    |  ====     |" << endl;
-    cout << "\t\t\t\t   |       |    |  ||||    / \\" << endl;
-    cout << "\t\t\t\t=================================" << endl;
+    cout << "\t\t\t\t\t\t\t\t_________________" << endl;
+    cout << "\t\t\t\t\t\t\t\t       " << head_string << "        |" << endl;
+    cout << "\t\t\t\t\t\t\t\t       O        |" << endl;
+    cout << "\t\t\t\t\t\t\t\t      / \\       |" << "\t     " << message << endl;
+    cout << "\t\t\t\t\t\t\t\t       |        |" << "\t     /" << endl;
+    cout << "\t\t\t\t\t\t\t\t      / \\       |           O  " << endl;
+    cout << "\t\t\t\t\t\t\t\t  ===" << stage << stage << stage << stage << stage << "===   |   " << lever << lever << "     / \\" << endl;
+    cout << "\t\t\t\t\t\t\t\t   |       |    |  ====     |" << endl;
+    cout << "\t\t\t\t\t\t\t\t   |       |    |  ||||    / \\" << endl;
+    cout << "\t\t\t\t\t\t\t\t=================================" << endl;
 }
